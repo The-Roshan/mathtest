@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Challenge</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <canvas id="backgroundCanvas"></canvas>
+
+    <header>
+        <h1>⚡ Math Challenge ⚡</h1>
+        <p class="subheading">Level up your math skills with fun challenges!</p>
+    </header>
+
+    <main>
+        <!-- Difficulty and Timer Controls -->
+        <section class="controls">
+            <div class="control-group">
+                <label for="difficulty" class="control-label">Difficulty</label>
+                <select id="difficulty" class="custom-select">
+                    <option value="easy">Easy</option>
+                    <option value="medium">Medium</option>
+                    <option value="hard">Hard</option>
+                </select>
+            </div>
+            <div class="control-group">
+                <label for="timer" class="control-label">Timer</label>
+                <select id="timer" class="custom-select">
+                    <option value="60">1 Minute</option>
+                    <option value="120">2 Minutes</option>
+                    <option value="300">5 Minutes</option>
+                </select>
+            </div>
+        </section>
+
+        <div class="button-container">
+            <button id="startButton" class="primary-btn">Start</button>
+            <button id="restartButton" class="primary-btn hidden">Restart</button>
+        </div>
+
+        <!-- Question Area -->
+        <section id="questionArea" class="hidden">
+            <div class="question-box">
+                <h2 id="question">Question appears here!</h2>
+            </div>
+            <input type="number" id="answer" class="answer-input" placeholder="Enter your answer">
+            <div class="button-container">
+                <button id="submitButton" class="secondary-btn">Submit</button>
+                <button id="skipButton" class="secondary-btn">Skip</button>
+            </div>
+        </section>
+        <p id="highScore" class="score-display"></p>
+
+        <!-- Stats Area -->
+        <section id="stats" class="hidden">
+            <p class="stat-item"><strong>Score:</strong> <span id="score">0</span></p>
+            <p class="stat-item"><strong>Time Left:</strong> <span id="timeLeft">0:00</span></p>
+        </section>
+
+        <!-- Scoreboard -->
+        <section id="scoreboard">
+            <h3>🏆 Scoreboard 🏆</h3>
+            <ul id="scoreList"></ul>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
